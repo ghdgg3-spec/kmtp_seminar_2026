@@ -54,7 +54,18 @@ nav{position:fixed;top:0;width:100%;background:rgba(242,234,224,0.78);backdrop-f
 .hero-title{margin-top:18px;font-size:clamp(2.2rem,6vw,4.2rem);font-weight:900;line-height:1.05;}
 .hero-subtitle{margin-top:14px;color:rgba(31,47,58,0.75);font-weight:700;}
 .hero-divider{width:80px;height:3px;background:rgba(130,178,192,0.65);margin:22px auto 0;border-radius:99px;}
-.hero-info{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;}
+.hero-info{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:28px;
+  margin-bottom:48px;   /* ✅ 카드 아래 공간 추가 */
+}
+
+.hero-cta{
+  margin-top:0;         /* 위에서 margin 줬으니 0으로 */
+}
 .info-card{min-width:220px;padding:16px 18px;border-radius:var(--radius);background:linear-gradient(180deg,var(--glass),var(--glass2));border:1px solid rgba(130,178,192,0.35);box-shadow:var(--shadow);}
 .info-label{color:rgba(31,47,58,0.60);font-size:12px;font-weight:900;letter-spacing:1.5px;}
 .info-value{margin-top:8px;font-size:18px;font-weight:900;}
