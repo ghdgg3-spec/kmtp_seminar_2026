@@ -94,7 +94,7 @@ section.content.visible{opacity:1;transform:translateY(0);}
 .flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:inherit;overflow:hidden;}
 .prize-img-wrap{height:65%;}
 .prize-img-wrap img{width:100%;height:100%;object-fit:cover;
-  object-position: center;}
+  object-position: 62% center;}
 .prize-body{padding:16px;}
 .prize-rank{position:absolute;top:14px;left:14px;font-weight:900;z-index:10;}
 
@@ -318,4 +318,23 @@ section.content.visible{opacity:1;transform:translateY(0);}
 .prize-card:hover{
   transform: translateY(-6px);
   box-shadow: 0 22px 60px rgba(31,47,58,0.16);
+}
+
+
+/* ===== Prize hover interaction (no flip) ===== */
+.prize-card{
+  transition: transform .18s ease, box-shadow .18s ease;
+  will-change: transform;
+}
+
+.prize-card:hover{
+  transform: translateY(-7px);
+  box-shadow: 0 22px 60px rgba(31,47,58,0.16);
+}
+
+/* 부드러운 3D 효과 */
+.prize-card .flip-inner{
+  height:100%;
+  transition: transform 120ms ease;
+  transform-style: preserve-3d;
 }
