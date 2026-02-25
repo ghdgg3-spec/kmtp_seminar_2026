@@ -206,3 +206,40 @@ section.content.visible{opacity:1;transform:translateY(0);}
   color: var(--ink);
   font-weight: 900;
 }
+
+/* ===== Program (card list) ===== */
+.program-cards{
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.program-card{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(31,47,58,0.06);
+  box-shadow: 0 10px 26px rgba(31,47,58,0.08);
+}
+
+.program-time{
+  min-width: 76px;
+  font-weight: 900;
+  color: rgba(31,47,58,0.75);
+}
+
+.program-main{
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.program-sub{
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
