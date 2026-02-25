@@ -105,11 +105,7 @@
     on(btnKR, "click", () => chooseLangAndEnter("kr"));
     on(navLangBtn, "click", toggleLang);
 
-    function flipCard(card) {
-      if (!card) return;
-      card.classList.toggle("flipped");
-    }
-    window.flipCard = flipCard;
+    
   });
 })();
 
