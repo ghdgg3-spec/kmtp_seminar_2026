@@ -112,3 +112,38 @@
     window.flipCard = flipCard;
   });
 })();
+
+/* ========= Prize 3D tilt on hover ========= */
+const prizeCards = document.querySelectorAll(".prize-card");
+
+prizeCards.forEach(card => {
+  const inner = card.querySelector(".flip-inner") || card;
+
+  function handleMove(e){
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+
+    const px = (x / r.width) - 0.5;   // -0.5 ~ 0.5
+    const py = (y / r.height) - 0.5;
+
+    const max = 8; // 기울기 강도 (deg)
+    const rx = (-py * max).toFixed(2);
+    const ry = (px * max).toFixed(2);
+
+    inner.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+  }
+
+  function handleEnter(){
+    inner.style.transition = "transform 120ms ease";
+  }
+
+  function handleLeave(){
+    inner.style.transition = "transform 220ms ease";
+    inner.style.transform = "rotateX(0deg) rotateY(0deg)";
+  }
+
+  card.addEventListener("mousemove", handleMove);
+  card.addEventListener("mouseenter", handleEnter);
+  card.addEventListener("mouseleave", handleLeave);
+});
